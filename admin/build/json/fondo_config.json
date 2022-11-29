@@ -1,0 +1,19 @@
+[
+    {
+        "id_fondo": "0",
+        "api_key": "Introduzca la Api-Key de Google",
+        "id_cal": "Introduzca Id del Calendario de Google",
+        "color_fondo": "#151719",
+        "color_bag_fec": "#3B3B3B",
+        "color_por_fec": "",
+        "color_txt_fec": "#808080",
+        "color_bag_des": "#364454",
+        "color_por_des": "",
+        "color_txt_tit": "#708090",
+        "color_txt_des": "#D3D3D3",
+        "color_bag_bot": "#365444",
+        "color_por_bot": "",
+        "color_fon_btn": "#D70026",
+        "color_tex_btn": "#FFFFFF"
+    }
+]

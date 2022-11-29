@@ -1,0 +1,12 @@
+[
+    {
+        "id_sw": "0",
+        "dato": "",
+        "cal_id": "",
+        "switch": "",
+        "estado": "Desactivado",
+        "estatus": "off",
+        "col_btn": "btn-light",
+        "type_btn": ""
+    }
+]

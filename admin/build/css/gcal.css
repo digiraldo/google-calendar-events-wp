@@ -1,0 +1,248 @@
+hr {
+    width: 50%
+}
+
+.gCalFlow {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.gCalFlow .gcf-header-block {
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-align: center
+    
+}
+
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title {
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+    color: dimgray;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-in-out
+}
+
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a {
+    color: #d3d3d3;
+    color: #a9a9a9;
+    color: #708090;
+    color: gray;
+    color: dimgray;
+    transition: all .3s ease-in-out
+}
+
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a:hover {
+    color: #2f4f4f;
+    cursor: pointer;
+    font-weight: 900
+}
+
+.gCalFlow .gcf-item-container-block {
+    font-family: Roboto Condensed, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify
+}
+
+@media (min-width:768px) {
+    .gCalFlow .gcf-item-container-block {
+        padding: 0 20px
+    }
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block {
+    box-shadow: 7px 7px 10px -5px rgba(255, 255, 255, 0.17); 
+    -moz-box-shadow: 7px 7px 10px -5px rgba(255, 255, 255, 0.17); 
+    -webkit-box-shadow: 7px 7px 10px -5px rgba(255, 255, 255, 0.17);
+    display: grid;
+    gap: 0;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 20px 2px;
+    text-align: center
+}
+
+@media (min-width:768px) {
+    .gCalFlow .gcf-item-container-block .gcf-item-block {
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+    }
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block {
+    align-content: center;
+    align-items: center;
+    background-color: rgba(237, 184, 61, .06);
+    display: flex;
+    justify-content: center;
+    padding: 0 30px
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0
+}
+
+@media (min-width:768px) {
+    .gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange {
+        align-content: center;
+        align-items: center;
+        display: grid;
+        gap: 1px;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+        justify-content: center;
+        justify-items: end
+    }
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h2,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h3,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h4 {
+    color: #708090
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange .no-margin {
+    margin: 0 10px
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h2 {
+    font-size: 31px;
+    line-height: .7;
+    text-align: center
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h2 span {
+    font-size: 27px;
+    font-weight: 400
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h3 {
+    font-size: 21px;
+    line-height: .8;
+    text-align: center
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h3 span {
+    font-size: 18px;
+    font-weight: 400
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block {
+    background-color: rgba(61, 114, 237, .06);
+    box-sizing: border-box;
+    padding: 3px 5px;
+    width: 100%
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block {
+    margin: 5px 1px
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title {
+    color: dimgray;
+    font-size: 26px;
+    font-weight: 700;
+    transition: all .3s ease-in-out
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a {
+    color: dimgray;
+    transition: all .3s ease-in-out
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a:hover {
+    color: gray;
+    cursor: pointer;
+    font-size: 28px
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-description {
+    color: #d3d3d3;
+    font-size: 17px
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-location {
+    color: #708090;
+    font-size: 14px;
+    margin: 10px 0 0
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario {
+    align-content: center;
+    align-items: center;
+    background-color: rgba(0, 215, 177, .06);
+    display: flex;
+    justify-content: center
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja {
+    background-color: #d70026;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    margin: 8.333px;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease-in-out
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja:hover {
+    background-color: #ccc;
+    color: #ff3e60;
+    cursor: pointer;
+    padding: 6px 40px
+}
+
+.gCalFlow .gcf-last-update-block {
+    color: dimgray;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 5px 40px;
+    text-align: center
+}
+
+.gCalFlow .gcf-last-update-block .gcf-last-update {
+    color: gray;
+    font-size: 14px;
+    text-align: center
+}
+
+
+.btn-roja {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    color: #ff3e60;
+    display: inline-block;
+    font-weight: 700;
+    margin: 2px;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease-in-out
+  }
+
+  .btn-roja:hover {
+    background-color: #ff3e60;;
+    color: #ccc;
+    cursor: pointer;
+    padding: 4px 13px
+  }
