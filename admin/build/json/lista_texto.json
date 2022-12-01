@@ -1,11 +1,11 @@
 [
     {
         "id_texto": "0",
-        "cal_title": "Nuestros Programas",
-        "cal_fecha": "Pronto",
-        "title_desc": "Entrenamiento y Actividades",
+        "cal_title": "Proximos Eventos",
+        "cal_fecha": "CEM",
+        "title_desc": "Actividad",
         "desc_evento": "En el momento no tenemos programas habilitados, si quiere saber acerca de ellos o los programas que realizamos, lo invitamos dar click",
-        "title_location": "Pronto",
+        "title_location": "Guadalajara, Jal, Mex.",
         "text_btn": "Vamos"
     }
 ]

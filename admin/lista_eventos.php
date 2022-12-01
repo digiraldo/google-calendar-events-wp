@@ -175,6 +175,10 @@ if (empty($listaSwText)) {
 
 if ($listaFonConf[0]['color_por_fec'] == 'FF') {
   $porcentajeFecha = 'Transp. 100%';
+} elseif ($listaFonConf[0]['color_por_fec'] == 'D9') {
+  $porcentajeFecha = 'Transp. 85%';
+} elseif ($listaFonConf[0]['color_por_fec'] == 'BF') {
+  $porcentajeFecha = 'Transp. 75%';
 } elseif ($listaFonConf[0]['color_por_fec'] == '80') {
   $porcentajeFecha = 'Transp. 50%';
 } elseif ($listaFonConf[0]['color_por_fec'] == '40') {
@@ -189,6 +193,10 @@ if ($listaFonConf[0]['color_por_fec'] == 'FF') {
 
 if ($listaFonConf[0]['color_por_des'] == 'FF') {
   $porcentajeDescripcion = 'Transp. 100%';
+} elseif ($listaFonConf[0]['color_por_des'] == 'D9') {
+  $porcentajeDescripcion = 'Transp. 85%';
+} elseif ($listaFonConf[0]['color_por_des'] == 'BF') {
+  $porcentajeDescripcion = 'Transp. 75%';
 } elseif ($listaFonConf[0]['color_por_des'] == '80') {
   $porcentajeDescripcion = 'Transp. 50%';
 } elseif ($listaFonConf[0]['color_por_des'] == '40') {
@@ -203,6 +211,10 @@ if ($listaFonConf[0]['color_por_des'] == 'FF') {
 
 if ($listaFonConf[0]['color_por_bot'] == 'FF') {
   $porcentajeBoton = 'Transp. 100%';
+} elseif ($listaFonConf[0]['color_por_bot'] == 'D9') {
+  $porcentajeBoton = 'Transp. 85%';
+} elseif ($listaFonConf[0]['color_por_bot'] == 'BF') {
+  $porcentajeBoton = 'Transp. 75%';
 } elseif ($listaFonConf[0]['color_por_bot'] == '80') {
   $porcentajeBoton = 'Transp. 50%';
 } elseif ($listaFonConf[0]['color_por_bot'] == '40') {
@@ -227,89 +239,83 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
   <title>Eventos</title>
   <script src="https://kit.fontawesome.com/2a290a3f5e.js" crossorigin="anonymous"></script>
   <style>
-    .btn-roja {
-      background-color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
-      border: none;
-      border-radius: 5px;
-      color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
-      display: inline-block;
-      font-weight: 700;
-      margin: 2px;
-      padding: 4px 10px;
-      text-align: center;
-      text-decoration: none;
-      transition: all .3s ease-in-out;
-    }
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
-    .btn-roja:hover {
-      background-color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
-      color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
-      cursor: pointer;
-      padding: 4px 13px;
-    }
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a:hover {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
 
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block {
+    background-color: <?php echo $listaFonConf[0]['color_bag_fec'] ,$listaFonConf[0]['color_por_fec']; ?>;
+}
 
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h2,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h3,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h4 {
+    color: <?php echo $listaFonConf[0]['color_txt_fec']; ?>;
+}
 
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block {
+    background-color: <?php echo $listaFonConf[0]['color_bag_des'] ,$listaFonConf[0]['color_por_des']; ?>;
+}
 
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
-    .toggle {
-      cursor: pointer;
-      display: inline-block;
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
-    .toggle-switch {
-      display: inline-block;
-      background: #ccc;
-      border-radius: 16px;
-      width: 58px;
-      height: 32px;
-      position: relative;
-      vertical-align: middle;
-      transition: background 0.25s;
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a:hover {
+    color: <?php echo $listaFonConf[0]['color_txt_fec']; ?>;
+}
 
-    .toggle-switch:before,
-    .toggle-switch:after {
-      content: "";
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-description {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
 
-    .toggle-switch:before {
-      display: block;
-      background: linear-gradient(to bottom, #fff 0%, #eee 100%);
-      border-radius: 50%;
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      transition: left 0.25s;
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-location {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
-    .toggle:hover .toggle-switch:before {
-      background: linear-gradient(to bottom, #fff 0%, #fff 100%);
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario {
+    background-color: <?php echo $listaFonConf[0]['color_bag_bot'] ,$listaFonConf[0]['color_por_bot']; ?>;
+}
 
-    .toggle-checkbox:checked+.toggle-switch {
-      background: #56c080;
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja {
+    background-color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+}
 
-    .toggle-checkbox:checked+.toggle-switch:before {
-      left: 30px;
-    }
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja:hover {
+    background-color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+}
 
-    .toggle-checkbox {
-      position: absolute;
-      visibility: hidden;
-    }
+.gCalFlow .gcf-last-update-block {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
 
-    .toggle-label {
-      margin-left: 5px;
-      position: relative;
-      top: 2px;
-    }
+.gCalFlow .gcf-last-update-block .gcf-last-update {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
+
+.btn-roja {
+    background-color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+  }
+
+.btn-roja:hover {
+  background-color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+  color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+}
   </style>
 
 </head>
@@ -347,13 +353,13 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
 
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Api-Key</span>
-          <input type="text" class="form-control" id="api_key" name="api_key" value="<?php echo $listaFonConf[0]['api_key']; ?>" placeholder="<?php echo $listaFonConf[0]['api_key']; ?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" id="api_key" name="api_key" value="<?php echo $listaFonConf[0]['api_key']; ?>" placeholder="Introduzca la Api-Key de Google" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
         </div>
 
         <div class="input-group mb-3">
           <span class="input-group-text" id="inputGroup-sizing-default">Id Calendario</span>
-          <input type="text" class="form-control" id="id_cal" name="id_cal" value="<?php echo $listaFonConf[0]['id_cal']; ?>" placeholder="<?php echo $listaFonConf[0]['id_cal']; ?>" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          <input type="text" class="form-control" id="id_cal" name="id_cal" value="<?php echo $listaFonConf[0]['id_cal']; ?>" placeholder="Introduzca Id del Calendario de Google" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
           <span class="input-group-text"><i class="fa-solid fa-calendar-check"></i></span>
         </div>
         <br>
@@ -372,6 +378,8 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                   <select class="form-select dropdown-toggle" id="color_por_fec" name="color_por_fec" aria-label="Default select example" style="margin: 30px 0;">
                     <option class="dropdown-item" value="<?php echo $listaFonConf[0]['color_por_fec'] ?>" selected><?php echo $porcentajeFecha; ?></option>
                     <option class="dropdown-item" value="FF">100%</option>
+                    <option class="dropdown-item" value="D9">85%</option>
+                    <option class="dropdown-item" value="BF">75%</option>
                     <option class="dropdown-item" value="80">50%</option>
                     <option class="dropdown-item" value="40">25%</option>
                     <option class="dropdown-item" value="26">15%</option>
@@ -390,6 +398,8 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                   <select class="form-select dropdown-toggle" id="color_por_des" name="color_por_des" aria-label="Default select example" style="margin: 30px 0;">
                     <option class="dropdown-item" value="<?php echo $listaFonConf[0]['color_por_des'] ?>" selected><?php echo $porcentajeDescripcion; ?></option>
                     <option class="dropdown-item" value="FF">100%</option>
+                    <option class="dropdown-item" value="D9">85%</option>
+                    <option class="dropdown-item" value="BF">75%</option>
                     <option class="dropdown-item" value="80">50%</option>
                     <option class="dropdown-item" value="40">25%</option>
                     <option class="dropdown-item" value="26">15%</option>
@@ -410,6 +420,8 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                   <select class="form-select dropdown-toggle" id="color_por_bot" name="color_por_bot" aria-label="Default select example" style="margin: 30px 0;" />
                   <option class="dropdown-item" value="<?php echo $listaFonConf[0]['color_por_bot'] ?>" selected><?php echo $porcentajeBoton; ?></option>
                   <option class="dropdown-item" value="FF">100%</option>
+                  <option class="dropdown-item" value="D9">85%</option>
+                  <option class="dropdown-item" value="BF">75%</option>
                   <option class="dropdown-item" value="80">50%</option>
                   <option class="dropdown-item" value="40">25%</option>
                   <option class="dropdown-item" value="26">15%</option>
@@ -506,7 +518,7 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
       </div>
     </div>
   </div>
-
+  <!-- /wordpress/wp-content/plugins/google-calendar-events-wp/ -->
 
   <!-- Modal -->
   <div class="modal fade" id="even-conf" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -560,6 +572,59 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
     </div>
   </div>
 
+
+
+
+  <script>
+
+/* -------------------------Configuración id Eventos api_key id_cal------------------------- */
+/* -------------------------Configuración id Eventos api_key id_cal------------------------- */
+
+
+_gCalFlow_debug = true;
+
+var $ = jQuery;
+  $(function() {
+    $('#gcf-simple').gCalFlow({
+      calid: '<?php echo $listaFonConf[0]['id_cal']; ?>',
+      apikey: '<?php echo $listaFonConf[0]['api_key']; ?>'
+    });
+    $('#gcf-design').gCalFlow({
+      calid: '<?php echo $listaFonConf[0]['id_cal']; ?>',
+      apikey: '<?php echo $listaFonConf[0]['api_key']; ?>',
+      maxitem: 10,
+      date_formatter: function(d, allday_p) {
+         return d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getYear().toString().substr(-2)
+         }
+    });
+    $('#gcf-ticker').gCalFlow({
+        calid: '<?php echo $listaFonConf[0]['id_cal']; ?>',
+        apikey: '<?php echo $listaFonConf[0]['api_key']; ?>',
+        maxitem: 25,
+        scroll_interval: 5 * 1000,
+        daterange_formatter: function (start_date, end_date, allday_p) {
+        function pad(n) { return n < 10 ? "0"+n : n; }
+        var monthname = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ];
+        return pad(start_date.getDate()) + " " + pad(monthname[start_date.getMonth()]) + " - " + pad(end_date.getDate()) + " " + pad(monthname[end_date.getMonth()]);
+        },
+    });
+    $('#gcf-custom-template').gCalFlow({
+      calid: '<?php echo $listaFonConf[0]['id_cal']; ?>',
+      apikey: '<?php echo $listaFonConf[0]['api_key']; ?>',
+      maxitem: 3,
+      scroll_interval: 5 * 1000,
+      mode: 'updates',
+      daterange_formatter: function (start_date, end_date, allday_p) {
+      function pad(n) { return n < 10 ? "0"+n : n; }
+      var monthname = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ];
+      return "<h2 class=\"no-margin\">" + pad(start_date.getDate()) + "<br><span>" + pad(monthname[start_date.getMonth()]) + "</span></h2>" + "<br>" + "<h3 class=\"no-margin\">" + pad(end_date.getDate()) + "<br><span>" + pad(monthname[end_date.getMonth()]) + "</span></h3>";
+      },
+    }); 
+  });
+
+
+
+</script>
 </body>
 
 </html>

@@ -1,59 +1,3 @@
-
-/* -------------------------Eventos Centro Mateo------------------------- */
-/* -------------------------Eventos Centro Mateo------------------------- */
-/* -------------------------Eventos Centro Mateo------------------------- */
-/* -------------------------Eventos Centro Mateo------------------------- */
-/* -------------------------Eventos Centro Mateo------------------------- */
-
-_gCalFlow_debug = true;
-
-var $ = jQuery;
-  $(function() {
-    $('#gcf-simple').gCalFlow({
-      calid: '35b2qba53usalutistin2t916o@group.calendar.google.com',
-      apikey: 'AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE'
-    });
-    $('#gcf-design').gCalFlow({
-      calid: '35b2qba53usalutistin2t916o@group.calendar.google.com',
-      apikey: 'AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE',
-      maxitem: 10,
-      date_formatter: function(d, allday_p) {
-         return d.getDate() + "/" + (d.getMonth()+1) + "/" + d.getYear().toString().substr(-2)
-         }
-    });
-    $('#gcf-ticker').gCalFlow({
-        calid: '35b2qba53usalutistin2t916o@group.calendar.google.com',
-        apikey: 'AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE',
-        maxitem: 25,
-        scroll_interval: 5 * 1000,
-        daterange_formatter: function (start_date, end_date, allday_p) {
-        function pad(n) { return n < 10 ? "0"+n : n; }
-        var monthname = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ];
-        return pad(start_date.getDate()) + " " + pad(monthname[start_date.getMonth()]) + " - " + pad(end_date.getDate()) + " " + pad(monthname[end_date.getMonth()]);
-        },
-    });
-    $('#gcf-custom-template').gCalFlow({
-      calid: '35b2qba53usalutistin2t916o@group.calendar.google.com',
-      apikey: 'AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE',
-      maxitem: 3,
-      scroll_interval: 5 * 1000,
-      mode: 'updates',
-      daterange_formatter: function (start_date, end_date, allday_p) {
-      function pad(n) { return n < 10 ? "0"+n : n; }
-      var monthname = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic" ];
-      return "<h2 class=\"no-margin\">" + pad(start_date.getDate()) + "<br><span>" + pad(monthname[start_date.getMonth()]) + "</span></h2>" + "<br>" + "<h3 class=\"no-margin\">" + pad(end_date.getDate()) + "<br><span>" + pad(monthname[end_date.getMonth()]) + "</span></h3>";
-      },
-    });
-
-
-
-    
-  });
-
-
-  /* ------------------------jquery.gcal_flow------------------------ */
-  /* ------------------------jquery.gcal_flow------------------------ */
-  /* ------------------------jquery.gcal_flow------------------------ */
   /* ------------------------jquery.gcal_flow------------------------ */
   /* ------------------------jquery.gcal_flow------------------------ */
 
@@ -265,6 +209,30 @@ var $ = jQuery;
       gCalFlow.prototype.fetch = function () {
         var success_handler;
         log.debug("Starting ajax call for " + this.gcal_url());
+/*         log.debug(this.gcal_url());
+        console.log(this.gcal_url()); */
+
+        const arrayCal = this.gcal_url();
+        const arrayAll = arrayCal['items'];
+        console.log(arrayAll);
+        // Solicitud GET (Request).//
+         fetch(arrayCal)
+          .then(response => response.json())  // convertir a json
+          .then(data => mostrarData(data))  //  imprimir los datos en la consola
+          .catch(err => console.log('Solicitud fallida', err)); // Capturar errores
+
+          const mostrarData = (data) => {
+            console.log(data);
+            console.log(data['items']);
+
+            let element = document.getElementById('elemen')
+            element.innerHTML = `
+              <p>${data.summary}</p>
+              <p>${data.description}</p>
+              `;
+          }
+
+
         if (this.opts.apikey === this.constructor.demo_apikey) {
           log.warn(
             "You are using built-in demo API key! This key is provided for tiny use or demo only. Your access may be limited."
@@ -274,6 +242,7 @@ var $ = jQuery;
         success_handler = (function (_this) {
           return function (data) {
             log.debug("Ajax call success. Response data:", data);
+            log.debug(data);
             return _this.render_data(data, _this);
           };
         })(this);
@@ -561,3 +530,6 @@ var $ = jQuery;
       }
     };
   }.call(this));
+  
+  
+  //console.log(t.find(".gcf-title").html);

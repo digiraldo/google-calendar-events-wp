@@ -1,0 +1,77 @@
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-header-block .gcf-title-block .gcf-title a:hover {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block {
+    background-color: <?php echo $listaFonConf[0]['color_bag_fec'] ,$listaFonConf[0]['color_por_fec']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h2,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h3,
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-header-block .gcf-item-date-block .gcf-item-daterange h4 {
+    color: <?php echo $listaFonConf[0]['color_txt_fec']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block {
+    background-color: <?php echo $listaFonConf[0]['color_bag_des'] ,$listaFonConf[0]['color_por_des']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-title-block .gcf-item-title a:hover {
+    color: <?php echo $listaFonConf[0]['color_txt_fec']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-description {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .gcf-item-body-block .gcf-item-location {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario {
+    background-color: <?php echo $listaFonConf[0]['color_bag_bot'] ,$listaFonConf[0]['color_por_bot']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja {
+    background-color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+}
+
+.gCalFlow .gcf-item-container-block .gcf-item-block .btn-calendario .boton-roja:hover {
+    background-color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+}
+
+.gCalFlow .gcf-last-update-block {
+    color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>;
+}
+
+.gCalFlow .gcf-last-update-block .gcf-last-update {
+    color: <?php echo $listaFonConf[0]['color_txt_des']; ?>;
+}
+
+.btn-roja {
+    background-color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+  }
+
+  .btn-roja:hover {
+    background-color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;
+    color: <?php echo $listaFonConf[0]['color_fon_btn']; ?>;
+  }
