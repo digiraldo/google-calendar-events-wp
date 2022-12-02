@@ -65,6 +65,7 @@ function activarCal(){
 		`title_desc` VARCHAR(60) NOT NULL,
 		`desc_evento` VARCHAR(400) NOT NULL,
 		`title_location` VARCHAR(200) NOT NULL,
+		`text_url` VARCHAR(60) NOT NULL,
 		`text_btn` VARCHAR(45) NOT NULL,
 		PRIMARY KEY (`id_texto`)
 	)";
@@ -72,8 +73,8 @@ function activarCal(){
 	$wpdb->query($sqlTextoConf);
 
 
-	$dataTextoConf = "INSERT INTO {$wpdb->prefix}evento_texto_pred (`id_texto`, `cal_title`, `cal_fecha`, `title_desc`, `desc_evento`, `title_location`, `text_btn`) VALUES
-	(0, 'Nuestros Programas', 'Pronto', 'Entrenamiento y Actividades', 'En el momento no tenemos programas habilitados, si quiere saber acerca de ellos o los programas que realizamos, lo invitamos dar click', 'Pronto', 'Vamos')";
+	$dataTextoConf = "INSERT INTO {$wpdb->prefix}evento_texto_pred (`id_texto`, `cal_title`, `cal_fecha`, `title_desc`, `desc_evento`, `title_location`, `text_url`, `text_btn`) VALUES
+	(0, 'Nuestros Programas', 'Pronto', 'Entrenamiento y Actividades', 'En el momento no tenemos programas habilitados, si quiere saber acerca de ellos o los programas que realizamos, lo invitamos dar click', 'Pronto', '#', 'Vamos')";
 
 	$wpdb->query($dataTextoConf);
 
@@ -256,7 +257,7 @@ function mostrar_eventos($atts) {
 	   '</div>' .
 	 '</div>' .
 	 '<div class="btn-calendario">' .
-	   '<a class="boton-roja" role="button">' . $a['text_btn'] . '</a>' .
+	   '<a href="' . $a['text_url'] . '" class="boton-roja" role="button">' . $a['text_btn'] . '</a>' .
 	 '</div>' .
    '</div>' .
  '</div>' .

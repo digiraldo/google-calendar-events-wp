@@ -32,6 +32,7 @@ $calFecha = (isset($_POST['cal_fecha'])) ? $_POST['cal_fecha'] : "";
 $titleDesc = (isset($_POST['title_desc'])) ? $_POST['title_desc'] : "";
 $descEvento = (isset($_POST['desc_evento'])) ? $_POST['desc_evento'] : "";
 $titleLocation = (isset($_POST['title_location'])) ? $_POST['title_location'] : "";
+$textUrl = (isset($_POST['text_url'])) ? $_POST['text_url'] : "";
 $textBtn = (isset($_POST['text_btn'])) ? $_POST['text_btn'] : "";
 
 
@@ -93,6 +94,7 @@ if (isset($_POST['btnGuardarTxt'])) {
 `title_desc` = %s,
 `desc_evento` = %s,
 `title_location` = %s,
+`text_url` = %s,
 `text_btn` = %s WHERE
 `id_texto` = $idTexto",
     $idTexto,
@@ -101,6 +103,7 @@ if (isset($_POST['btnGuardarTxt'])) {
     $titleDesc,
     $descEvento,
     $titleLocation,
+    $textUrl,
     $textBtn
   );
   $wpdb->query($datosTexto);
@@ -428,10 +431,15 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                   <option class="dropdown-item" value="0D">5%</option>
                   </select>
                   <div class="input-group mb-3 justify-content-center">
+
                     <a class="btn-roja" role="button"><?php echo $listaTextPred[0]['text_btn']; ?></a>
                     <div class="row">
                       <input type="color" class="form-control form-control-color" id="color_fon_btn" name="color_fon_btn" value="<?php echo $listaFonConf[0]['color_fon_btn']; ?>" title="color fondo del botón" style="margin-left: 5px;" />
                       <input type="color" class="form-control form-control-color" id="color_tex_btn" name="color_tex_btn" value="<?php echo $listaFonConf[0]['color_tex_btn']; ?>" title="color texto del botón" style="margin-left: 5px;" />
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"  <?php echo $listaSwText[0]['switch']; ?>/>
+                      <label class="form-check-label" for="flexSwitchCheckChecked"><?php echo $listaSwText[0]['estado']; ?></label>
                     </div>
                   </div>
                 </div>
@@ -502,7 +510,7 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                   </div>
                 </div>
                 <div class="btn-calendario">
-                  <a class="boton-roja" role="button"><?php echo $listaTextPred[0]['text_btn']; ?></a>
+                  <a href="<?php echo $listaTextPred[0]['text_url']; ?>" class="boton-roja" role="button"><?php echo $listaTextPred[0]['text_btn']; ?></a>
                 </div>
               </div>
             </div>
@@ -537,7 +545,7 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
               <input type="hidden" required name="id_texto" value="<?php echo $listaTextPred[0]['id_texto']; ?>" placeholder="" id="id_texto" requiere="">
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="cal_fecha" style="color: black; ?>">Título Calendario</span>
+                <span class="input-group-text" id="cal_fecha" style="color: black;">Título Calendario</span>
                 <input type="text" class="form-control" id="cal_title" name="cal_title" value="<?php echo $listaTextPred[0]['cal_title']; ?>" placeholder="Título Calendario" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
@@ -561,6 +569,11 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                 <input type="text" class="form-control" id="text_btn" name="text_btn" value="<?php echo $listaTextPred[0]['text_btn']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 <button class="btn-roja btn" type="button" id="text_btn"><?php echo $listaTextPred[0]['text_btn']; ?></button>
               </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="text_url">Url de Botón</span>
+                <input type="text" class="form-control" id="text_url" name="text_url" value="<?php echo $listaTextPred[0]['text_url']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <button class="btn-roja btn" type="button" id="text_url"><i class="fa-solid fa-link"></i></button>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -572,14 +585,9 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
     </div>
   </div>
 
-
-
-
   <script>
-
 /* -------------------------Configuración id Eventos api_key id_cal------------------------- */
 /* -------------------------Configuración id Eventos api_key id_cal------------------------- */
-
 
 _gCalFlow_debug = true;
 
@@ -621,9 +629,6 @@ var $ = jQuery;
       },
     }); 
   });
-
-
-
 </script>
 </body>
 

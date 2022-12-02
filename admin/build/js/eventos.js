@@ -169,12 +169,15 @@
         var now;
         if (!this.opts.calid && !this.opts.data_url) {
           log.error(
-            "Option calid and data_url are missing. Abort URL generation"
+            //"Option calid and data_url are missing. Abort URL generation"
+            "Faltan las opciones Id Calendario y/o Api-Key. Para ver los eventos"
           );
           this.target.text(
-            "Error: You need to set 'calid' or 'data_url' option."
+            //"Error: You need to set 'calid' or 'data_url' option."
+            "Error: debe configurar la opción 'Id Calendario' y 'Api-Key'."
           );
-          throw "gCalFlow: calid and data_url missing";
+          throw "gCalFlow: faltan 'Id Calendario' y 'Api-Key'";
+          //throw "gCalFlow: calid and data_url missing";
         }
         if (this.opts.data_url) {
           return this.opts.data_url;
