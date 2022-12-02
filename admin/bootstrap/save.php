@@ -58,7 +58,7 @@
       <img class="card-img-top" src="img/calendar-64px.png" alt="Title">
       <div class="card-body">
         <h4 class="card-title wp-heading-inline"><?php echo get_admin_page_title() ?></h4>
-        <p class="card-text">Configuración del Calendario de Google</p>
+        <p class="card-text">Configuracion del Calendario de Google</p>
       </div>
     </div>
     <div class="mb-3">

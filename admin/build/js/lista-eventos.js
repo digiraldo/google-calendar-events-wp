@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 
 
     $("#btn-nuevo").click(function(){
-        //console.log('Estoy AQUÍ, Mirame');
+        //console.log('Estoy AQUI, Mirame');
          $("#even-conf").modal("show");
 
     });

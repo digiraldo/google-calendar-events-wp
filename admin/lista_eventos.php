@@ -327,12 +327,12 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
 
   <div class="container text-center text-white bg-dark" style=" height: 100%; width: 100%;">
     <div class="card-header">
-      <i class="fa-solid fa-gear"></i> Configuración
+      <i class="fa-solid fa-gear"></i> Configuracion
     </div>
     <form class="row g-3" action="" method="post" enctype="multipart/form-data">
       <div class="card-body">
         <h5 class="card-title"><?php echo get_admin_page_title() ?></h5>
-        <p class="card-text">Configuración del Calendario de Google.</p>
+        <p class="card-text">Configuracion del Calendario de Google.</p>
         <h6 class="card-title"><i class="fa-solid fa-file-code"></i> Colocar en Shortcode: <b>[eventos]</b></h6>
         <br>
         <div class="container text-center text-white bg-dark">
@@ -409,16 +409,16 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
                     <option class="dropdown-item" value="0D">5%</option>
                   </select>
                   <div class="input-group mb-3 justify-content-center">
-                    <span class="input-group-text" style="color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>; background-color: rgba(255, 255, 255, 0.01);"> Color <b> Título</b></span>
-                    <div><input type="color" class="form-control form-control-color" id="color_txt_tit" name="color_txt_tit" value="<?php echo $listaFonConf[0]['color_txt_tit']; ?>" title="Color Texto Título" style="margin-right: 10px;" /></div>
+                    <span class="input-group-text" style="color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>; background-color: rgba(255, 255, 255, 0.01);"> Color <b> Titulo</b></span>
+                    <div><input type="color" class="form-control form-control-color" id="color_txt_tit" name="color_txt_tit" value="<?php echo $listaFonConf[0]['color_txt_tit']; ?>" title="Color Texto Titulo" style="margin-right: 10px;" /></div>
                     <span class="input-group-text" style="color: <?php echo $listaFonConf[0]['color_txt_des']; ?>; background-color: rgba(255, 255, 255, 0.01);"> Color <b> Descrip</b></span>
-                    <div><input type="color" class="form-control form-control-color" id="color_txt_des" name="color_txt_des" value="<?php echo $listaFonConf[0]['color_txt_des']; ?>" title="Color Texto Descripción" style="margin-left: 0;" /></div>
+                    <div><input type="color" class="form-control form-control-color" id="color_txt_des" name="color_txt_des" value="<?php echo $listaFonConf[0]['color_txt_des']; ?>" title="Color Texto Descripcion" style="margin-left: 0;" /></div>
                   </div>
                 </div>
               </div>
               <div class="card" style="padding: 2px 10px; background-color: <?php echo $listaFonConf[0]['color_bag_bot'], $listaFonConf[0]['color_por_bot']; ?>;">
                 <div class="card-body input-group col-md" style="margin: 0; padding: 0;">
-                  <span class="input-group-text" id="exampleColorInput" style="margin: 30px 0;">Fondo Botón</span>
+                  <span class="input-group-text" id="exampleColorInput" style="margin: 30px 0;">Fondo Boton</span>
                   <div><input type="color" class="form-control form-control-color" id="color_bag_bot" name="color_bag_bot" value="<?php echo $listaFonConf[0]['color_bag_bot']; ?>" title="Seleccione color de fondo" style="margin: 30px 0;" /></div>
                   <select class="form-select dropdown-toggle" id="color_por_bot" name="color_por_bot" aria-label="Default select example" style="margin: 30px 0;" />
                   <option class="dropdown-item" value="<?php echo $listaFonConf[0]['color_por_bot'] ?>" selected><?php echo $porcentajeBoton; ?></option>
@@ -434,8 +434,8 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
 
                     <a class="btn-roja" role="button"><?php echo $listaTextPred[0]['text_btn']; ?></a>
                     <div class="row">
-                      <input type="color" class="form-control form-control-color" id="color_fon_btn" name="color_fon_btn" value="<?php echo $listaFonConf[0]['color_fon_btn']; ?>" title="color fondo del botón" style="margin-left: 5px;" />
-                      <input type="color" class="form-control form-control-color" id="color_tex_btn" name="color_tex_btn" value="<?php echo $listaFonConf[0]['color_tex_btn']; ?>" title="color texto del botón" style="margin-left: 5px;" />
+                      <input type="color" class="form-control form-control-color" id="color_fon_btn" name="color_fon_btn" value="<?php echo $listaFonConf[0]['color_fon_btn']; ?>" title="color fondo del boton" style="margin-left: 5px;" />
+                      <input type="color" class="form-control form-control-color" id="color_tex_btn" name="color_tex_btn" value="<?php echo $listaFonConf[0]['color_tex_btn']; ?>" title="color texto del boton" style="margin-left: 5px;" />
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"  <?php echo $listaSwText[0]['switch']; ?>/>
@@ -516,13 +516,13 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
             </div>
             <hr size="1px" color="LightSlateGray" />
             <div class="gcf-last-update-block">
-              Última actualización: <span class="gcf-last-update"></span>
+              Ultima actualizacion: <span class="gcf-last-update"></span>
             </div>
           </div> <!-- gCalFlow -->
 
       </div>
       <div class="card-footer text-muted">
-        Más información en: <img src="/wordpress/wp-content/plugins/google-calendar-events-wp/admin/img/DiGiraldo-18px.png" alt="image desc" /> <a href="https://digiraldo.online" target="_blank">DiGiraldo</a>
+        Mas informacion en: <img src="/wordpress/wp-content/plugins/google-calendar-events-wp/admin/img/DiGiraldo-18px.png" alt="image desc" /> <a href="https://digiraldo.online" target="_blank">DiGiraldo</a>
       </div>
     </div>
   </div>
@@ -545,32 +545,32 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
               <input type="hidden" required name="id_texto" value="<?php echo $listaTextPred[0]['id_texto']; ?>" placeholder="" id="id_texto" requiere="">
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="cal_fecha" style="color: black;">Título Calendario</span>
-                <input type="text" class="form-control" id="cal_title" name="cal_title" value="<?php echo $listaTextPred[0]['cal_title']; ?>" placeholder="Título Calendario" aria-label="Username" aria-describedby="basic-addon1">
+                <span class="input-group-text" id="cal_fecha" style="color: black;">Titulo Calendario</span>
+                <input type="text" class="form-control" id="cal_title" name="cal_title" value="<?php echo $listaTextPred[0]['cal_title']; ?>" placeholder="Titulo Calendario" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text" id="cal_fecha" style="background-color: <?php echo $listaFonConf[0]['color_bag_fec'], $listaFonConf[0]['color_por_fec']; ?>; color: <?php echo $listaFonConf[0]['color_txt_fec']; ?>;">Texto Fecha</span>
                 <input type="text" class="form-control" id="cal_fecha" name="cal_fecha" value="<?php echo $listaTextPred[0]['cal_fecha']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="title_desc" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>">Título Descripción</span>
+                <span class="input-group-text" id="title_desc" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>">Titulo Descripcion</span>
                 <input type="text" class="form-control" id="title_desc" name="title_desc" value="<?php echo $listaTextPred[0]['title_desc']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_des']; ?>" id="desc_evento">Descripción</span>
+                <span class="input-group-text" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_des']; ?>" id="desc_evento">Descripcion</span>
                 <textarea class="form-control" aria-label="With textarea" id="desc_evento" name="desc_evento" placeholder=""><?php echo $listaTextPred[0]['desc_evento']; ?></textarea>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>" id="title_location">Ubicación</span>
+                <span class="input-group-text" style="background-color: <?php echo $listaFonConf[0]['color_bag_des'], $listaFonConf[0]['color_por_des']; ?>; color: <?php echo $listaFonConf[0]['color_txt_tit']; ?>" id="title_location">Ubicacion</span>
                 <input type="text" class="form-control" aria-label="With textarea" id="title_location" name="title_location" value="<?php echo $listaTextPred[0]['title_location']; ?>" placeholder="">
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="text_btn" style="background-color: <?php echo $listaFonConf[0]['color_bag_bot'], $listaFonConf[0]['color_por_bot']; ?>; color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;">Título Botón</span>
+                <span class="input-group-text" id="text_btn" style="background-color: <?php echo $listaFonConf[0]['color_bag_bot'], $listaFonConf[0]['color_por_bot']; ?>; color: <?php echo $listaFonConf[0]['color_tex_btn']; ?>;">Titulo Boton</span>
                 <input type="text" class="form-control" id="text_btn" name="text_btn" value="<?php echo $listaTextPred[0]['text_btn']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 <button class="btn-roja btn" type="button" id="text_btn"><?php echo $listaTextPred[0]['text_btn']; ?></button>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="text_url">Url de Botón</span>
+                <span class="input-group-text" id="text_url">Url de Boton</span>
                 <input type="text" class="form-control" id="text_url" name="text_url" value="<?php echo $listaTextPred[0]['text_url']; ?>" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 <button class="btn-roja btn" type="button" id="text_url"><i class="fa-solid fa-link"></i></button>
               </div>
@@ -586,8 +586,8 @@ if ($listaFonConf[0]['color_por_bot'] == 'FF') {
   </div>
 
   <script>
-/* -------------------------Configuración id Eventos api_key id_cal------------------------- */
-/* -------------------------Configuración id Eventos api_key id_cal------------------------- */
+/* -------------------------Configuracion id Eventos api_key id_cal------------------------- */
+/* -------------------------Configuracion id Eventos api_key id_cal------------------------- */
 
 _gCalFlow_debug = true;
 

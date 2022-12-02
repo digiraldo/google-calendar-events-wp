@@ -263,7 +263,7 @@ function mostrar_eventos($atts) {
  '</div>' .
  '<hr size="1px" color="LightSlateGray" />' .
  '<div class="gcf-last-update-block">' .
-   'Última actualización: <span class="gcf-last-update"></span>' .
+   'Ultima actualizacion: <span class="gcf-last-update"></span>' .
  '</div>' .
 '</div>' .
 '<br>'
@@ -422,8 +422,8 @@ if (empty($listaFonConfCal)) {
 ?>
 <script>
 
-/* -------------------------Configuración id Eventos------------------------- */
-/* -------------------------Configuración id Eventos------------------------- */
+/* -------------------------Configuracion id Eventos------------------------- */
+/* -------------------------Configuracion id Eventos------------------------- */
 
 _gCalFlow_debug = true;
 

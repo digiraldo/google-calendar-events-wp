@@ -1,4 +1,4 @@
-# Introducción Bases de Datos 
+# Introduccion Bases de Datos 
 
 ## Iniciamos base de datos (*Linux o Mac*)
 
@@ -62,7 +62,7 @@ INSERT INTO servicios (nombre, precio) VALUES ("Corte de Cabello de Adulto", 80)
 ```
 
 ```
-INSERT INTO servicios (nombre, precio) VALUES ("Corte de Cabello de Niño", 60);
+INSERT INTO servicios (nombre, precio) VALUES ("Corte de Cabello de Nino", 60);
 ```
 
 #### *Insertar Varios Valores*
@@ -158,7 +158,7 @@ SELECT * FROM servicios;
 UPDATE servicios SET precio = 70 WHERE id = 2;
 ```
 ```
-UPDATE servicios SET nombre = "Corte de Cabello de Niño Actualizado" WHERE id = 2;
+UPDATE servicios SET nombre = "Corte de Cabello de Nino Actualizado" WHERE id = 2;
 ```
 ```
 UPDATE servicios SET nombre = "Corte de Cabello de Adulto ACTUALIZADO", PRECIO = 120 WHERE id = 1;
@@ -355,19 +355,19 @@ SELECT * FROM reservaciones WHERE fecha = "2021-06-28" AND id IN(1, 10);
 SELECT * FROM reservaciones WHERE fecha = "2021-06-28" AND id = 1 AND nombre = 'Juan';
 ```
 
-### **Reglas de Normalización o Formas Normales**
+### **Reglas de Normalizacion o Formas Normales**
 
 |Reglas  |
 |---------|
 |1NF     |
 |2NF     |
 |3NF     |
-|Denormalización     |
+|Denormalizacion     |
 
  
 ## Diagramas ER
 
-### **Diagramas Entidad Relación**
+### **Diagramas Entidad Relacion**
 
 - ##### Cardinalidad
 
