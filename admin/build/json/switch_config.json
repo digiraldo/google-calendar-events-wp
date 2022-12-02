@@ -1,12 +1,12 @@
 [
     {
         "id_sw": "0",
-        "dato": "on",
-        "cal_id": "gcf-custom-template",
-        "switch": "checked",
-        "estado": "Activado",
-        "estatus": "on",
-        "col_btn": "btn-success",
-        "type_btn": "hidden"
+        "dato": "",
+        "cal_id": "",
+        "switch": "",
+        "estado": "Desactivado",
+        "estatus": "off",
+        "col_btn": "btn-light",
+        "type_btn": ""
     }
 ]

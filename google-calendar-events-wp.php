@@ -282,7 +282,7 @@ add_shortcode('eventos', 'mostrar_eventos');
 <?php 
 add_action('wp_head', function(){?>
 <?php
-global $wpdb;
+ global $wpdb;
 
 $fondoConf = "{$wpdb->prefix}evento_fondo_conf";
 
@@ -290,7 +290,7 @@ $queryFondo = "SELECT * FROM $fondoConf";
 $listaFonConf = $wpdb->get_results($queryFondo, ARRAY_A);
 if (empty($listaFonConf)) {
   $listaFonConf = array();
-}
+}/* */
 /*
 $textoPred = "{$wpdb->prefix}evento_texto_pred";
 $switchTxt = "{$wpdb->prefix}evento_switch_texto";
@@ -466,24 +466,24 @@ var $ = jQuery;
     }); 
   });
  /* 
-  console.log(new Date().toJSON());
-  console.log($.prototype.fetch);
-  console.log($.data['items']);
-  console.log($.find(".gcf-item-title"));
-  console.log($.find(".gcf-item-title")[0]['innerText']);
- console.log(gCalFlow.prototype.fetch(now)); */
-  /* log.debug(this.gcal_url()); */
+console.log(new Date().toJSON());
+console.log($.prototype.fetch);
+console.log($.data['items']);
+console.log($.find(".gcf-item-title"));
+console.log($.find(".gcf-item-title")[0]['innerText']);
+console.log(gCalFlow.prototype.fetch(now));
+log.debug(this.gcal_url());
 
-  console.log($.find(".gcf-item-description")[0]['innerText']);
-/*   console.log(document.Ajax call success. Response data: ); */
+console.log($.find(".gcf-item-description")[0]['innerText']);
+console.log(document.Ajax call success. Response data: );
 
-  const heading = document.querySelector('.gcf-item-title')
+const heading = document.querySelector('.gcf-item-title')
   console.log(heading);
-  /* console.log(heading.Ajaxcallsuccess.Responsedata);  */
 
-  // gCalFlow.prototype.fetch (arrayCal){};
+console.log(heading.Ajaxcallsuccess.Responsedata);
 
-
+  gCalFlow.prototype.fetch (arrayCal){};
+ */
 </script>
 <script src="/wordpress/wp-content/plugins/google-calendar-events-wp/admin/build/js/eventos.js"></script>
 <?php }  ,9999); ?>

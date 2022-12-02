@@ -1,19 +1,19 @@
 [
     {
         "id_fondo": "0",
-        "api_key": "AIzaSyB4x70PYpmslKqPy_fvvoMMTKADc9UdifE",
-        "id_cal": "35b2qba53usalutistin2t916o@group.calendar.google.com",
-        "color_fondo": "#ffffff",
-        "color_bag_fec": "#3b3b3b",
-        "color_por_fec": "40",
-        "color_txt_fec": "#27282b",
+        "api_key": "",
+        "id_cal": "",
+        "color_fondo": "#151719",
+        "color_bag_fec": "#3B3B3B",
+        "color_por_fec": "",
+        "color_txt_fec": "#808080",
         "color_bag_des": "#364454",
-        "color_por_des": "40",
-        "color_txt_tit": "#2c333a",
-        "color_txt_des": "#171616",
+        "color_por_des": "",
+        "color_txt_tit": "#708090",
+        "color_txt_des": "#D3D3D3",
         "color_bag_bot": "#365444",
-        "color_por_bot": "40",
-        "color_fon_btn": "#d70026",
-        "color_tex_btn": "#ffffff"
+        "color_por_bot": "",
+        "color_fon_btn": "#D70026",
+        "color_tex_btn": "#FFFFFF"
     }
 ]
