@@ -72,5 +72,4 @@ function cargar_archivo_js () {
 ```
 
 
-
 Resaltar codigos en pagina web: https://github.com/EnlighterJS/EnlighterJS
