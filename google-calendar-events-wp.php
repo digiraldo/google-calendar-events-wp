@@ -200,9 +200,15 @@ function encolarJSCal($hook){
 add_action('admin_enqueue_scripts','encolarJSCal');
 
 
+// Cargar Js y CSS en Frontend
 add_action ('wp_enqueue_scripts', 'cargar_frontend_js');
 function cargar_frontend_js () {
-  wp_enqueue_script( 'mi-script', get_template_directory_uri() . 'admin/build/js/eventos.js', array('jquery'), '1.0.0', true );
+  wp_enqueue_script( 'gCal', plugin_dir_url( __FILE__ ) . 'admin/build/js/eventos.js', array('jquery'), '1.0.0', true );
+}
+
+add_action ('wp_enqueue_scripts', 'cargar_frontend_css');
+function cargar_frontend_css () {
+	wp_enqueue_style( 'gCalCss', plugin_dir_url( __FILE__ ) . 'admin/build/css/app.css');
 }
 
 
@@ -491,7 +497,6 @@ console.log(heading.Ajaxcallsuccess.Responsedata);
   gCalFlow.prototype.fetch (arrayCal){};
  */
 </script>
-<!-- <script src="/wordpress/wp-content/plugins/google-calendar-events-wp/admin/build/js/eventos.js"></script> -->
 <?php }  ,9999); ?>
 <!-- 
 /wordpress/wp-content/plugins/google-calendar-events-wp/
