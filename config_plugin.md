@@ -62,5 +62,14 @@ function cargar_archivo_js () {
 }
 ```
 
+#### Si desea ver debug en wp habilite estas lineas para habilitar el modo depuración
+##### Modulo que nos informa los errores, avisos y advertencias de PHP
+En el archivo: wp-config.php
+
+* Buscamos y cambiamos a true
+define( 'WP_DEBUG', true );
+
+
+define( 'WP_DEBUG', false );
 
 Resaltar codigos en pagina web: https://github.com/EnlighterJS/EnlighterJS
