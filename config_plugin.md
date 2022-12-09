@@ -66,10 +66,28 @@ function cargar_archivo_js () {
 ##### Modulo que nos informa los errores, avisos y advertencias de PHP
 En el archivo: wp-config.php
 
-* Buscamos y cambiamos a true
+* Buscamos y cambiamos a true: define( 'WP_DEBUG', false );
+
+```
 define( 'WP_DEBUG', true );
+```
 
+* Añadimos esta linea de código para habilitar la visualización de mensajes dentro de la parte visible de la pagina web
+```
+define( 'WP_DEBUG_DISPLAY', true );
+```
 
-define( 'WP_DEBUG', false );
+* Habilitar el registro de depuración en el archivo /wp-content/debug.log
+```
+define( 'WP_DEBUG_LOG', true );
+```
+
+Puede y copiar y pegar el código completo aquí:
+```
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', true );
+define( 'WP_DEBUG_LOG', true );
+```
+
 
 Resaltar codigos en pagina web: https://github.com/EnlighterJS/EnlighterJS
